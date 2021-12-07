@@ -46,8 +46,8 @@ positions.forEach((pos) => {
 
     for (let i = 0; i < positions.length; i++) {
       const pos = positions[i];
-      const d = Math.abs(eachPos - pos);
-      sum += Math.abs((d * (d + 1)) / 2);
+      const diff = Math.abs(eachPos - pos);
+      sum += (diff * (diff + 1)) / 2; // sum of AP
     }
 
     if (sum < minSum) {
