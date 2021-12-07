@@ -17,7 +17,7 @@ positions.forEach((pos) => {
 {
   // Part 1
   let minSum = Number.POSITIVE_INFINITY;
-  let minSumValue;
+  let minSumPos;
 
   for (let eachPos = minPos; eachPos < maxPos; eachPos++) {
     let sum = 0;
@@ -29,17 +29,17 @@ positions.forEach((pos) => {
 
     if (sum < minSum) {
       minSum = sum;
-      minSumValue = eachPos;
+      minSumPos = eachPos;
     }
   }
 
-  console.log(minSumValue, minSum);
+  console.log(minSumPos, minSum);
 }
 
 {
   // Part 2
   let minSum = Number.POSITIVE_INFINITY;
-  let minSumValue;
+  let minSumPos;
 
   for (let eachPos = minPos; eachPos < maxPos; eachPos++) {
     let sum = 0;
@@ -52,9 +52,9 @@ positions.forEach((pos) => {
 
     if (sum < minSum) {
       minSum = sum;
-      minSumValue = eachPos;
+      minSumPos = eachPos;
     }
   }
 
-  console.log(minSumValue, minSum);
+  console.log(minSumPos, minSum);
 }
