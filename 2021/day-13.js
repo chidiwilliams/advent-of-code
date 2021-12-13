@@ -26,7 +26,7 @@ pts.forEach(([x, y]) => {
 flds.forEach((fold) => {
   const foldPosition = Number(fold[1]);
   if (fold[0] === 'y') {
-    // Copy old grid
+    // Copy old points
     const newGrid = Array.from({ length: foldPosition }, (_, i) =>
       ((i) => Array.from({ length: grid[0].length }, (_, j) => grid[i][j]))(i),
     );
@@ -46,10 +46,12 @@ flds.forEach((fold) => {
 
     grid = newGrid;
   } else {
+    // Copy old points
     const newGrid = Array.from({ length: grid.length }, (_, i) =>
       ((i) => Array.from({ length: foldPosition }, (_, j) => grid[i][j]))(i),
     );
 
+    // Fold rest of grid
     grid.forEach((row, i) => {
       row.forEach((_, j) => {
         if (j > foldPosition) {
